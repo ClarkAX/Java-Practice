@@ -1,0 +1,23 @@
+Question: Given an int n, return true if it is within 10 of 100 or 200. Note: Math.abs(num) computes the absolute value of a number.
+
+nearHundred(93) → true
+nearHundred(90) → true
+nearHundred(89) → false
+
+
+Solution: 
+public boolean nearHundred(int n) {
+  int [] nums = {210, 209, 208, 207, 206, 205, 204, 203, 202, 201, 200, 199, 198, 197, 196, 195, 194, 193, 192, 191, 190, 110, 109, 108, 107, 106, 105, 104, 103, 102, 101, 100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90};
+  int count = (nums.length)-1;
+  boolean status = false;
+  
+  while (status == false){
+    if(n == nums[count])
+      status = true;
+    if(count == 0)
+      break;
+    count --;  
+  }
+  
+  return status;
+}
