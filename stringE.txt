@@ -1,0 +1,19 @@
+Question: Return true if the given string contains between 1 and 3 'e' chars.
+
+stringE("Hello") → true
+stringE("Heelle") → true
+stringE("Heelele") → false
+
+Solution:
+public boolean stringE(String str) {
+  int eCounter = 0 ; // need to initiate a variable before using in a loop
+  
+  for(int count = 0; count < (str.length()); count++){
+    if(str.charAt(count) == 'e')
+      eCounter++;
+  }
+  
+  if(eCounter>=1 && eCounter<=3)
+    return true;
+  return false;
+}
